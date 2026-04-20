@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>PTNN Capybara Store</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Montserrat',sans-serif;}
+body{background:linear-gradient(135deg,#f5e6d3,#e8c9a8,#d7bfae,#c49a6c);color:#3b2f2f;display:flex;}
+
+.sidebar{
+width:240px;
+background:rgba(78,52,46,0.95);
+min-height:100vh;
+padding:20px;
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+.sidebar h3{color:#ffe8c2;font-size:14px;margin-bottom:10px;}
+
+.nav-item{
+padding:10px 12px;
+border-radius:10px;
+color:#f5e6d3;
+cursor:pointer;
+transition:0.3s;
+text-decoration:none;
+display:block;
+}
+
+.nav-item:hover{
+background:rgba(255,255,255,0.1);
+transform:translateX(5px);
+}
+
+.nav-item.active{
+background:#e6b98a;
+color:#2b1b14;
+font-weight:700;
+transform:translateX(8px);
+}
+
+.auth-box{
+margin-top:auto;
+display:flex;
+flex-direction:column;
+gap:8px;
+}
+
+.btn{
+padding:10px 12px;
+border-radius:999px;
+text-align:center;
+font-weight:700;
+text-decoration:none;
+cursor:pointer;
+border:none;
+}
+
+.btn-login{
+background:linear-gradient(135deg,#f6d365,#fda085);
+color:#3b2f2f;
+}
+
+.btn-signup{
+background:linear-gradient(135deg,#8d6e63,#a1887f);
+color:#fff;
+}
+
+.btn-logout{
+background:#ff6b6b;
+color:#fff;
+}
+
+.main{flex:1;display:flex;flex-direction:column;}
+
+.header{padding:20px;background:#4e342e;color:#ffe8c2;display:flex;justify-content:space-between;align-items:center;}
+
+.title{font-weight:700;}
+
+.cart{background:#fff3e0;padding:8px 12px;border-radius:999px;font-weight:700;cursor:pointer;}
+
+.container{padding:20px;}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px;}
+
+.card{background:#fff3e0;border-radius:15px;padding:15px;text-align:center;}
+
+.img{width:100%;height:150px;border-radius:12px;background-size:cover;background-position:center;margin-bottom:10px;}
+
+.price{font-weight:700;}
+
+button{margin-top:10px;padding:8px 12px;border:none;border-radius:999px;background:linear-gradient(135deg,#c49a6c,#e6b98a);font-weight:700;cursor:pointer;}
+
+.footer{text-align:center;padding:15px;font-size:12px;opacity:0.8;}
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+<h3>🐹 Phương Thích Nghe Nhạc - Music With You Everyday!</h3>
+
+<a class="nav-item active" href="index.html">Home</a>
+<a class="nav-item" href="social_medias.html">PTNN's Social medias</a>
+<a class="nav-item" href="community.html">Community</a>
+<a class="nav-item" href="store.html">Store</a>
+<a class="nav-item" href="about.html">About</a>
+
+<div class="auth-box">
+<a class="btn btn-login" href="login.html">Login</a>
+<a class="btn btn-signup" href="signup.html">Sign Up</a>
+<button class="btn btn-logout" onclick="logout()">Sign Out</button>
+</div>
+
+</div>
+
+<div class="main">
+
+<div class="header">
+<div class="title">🛍 PTNN Capybara Store</div>
+<div class="cart">Cart 🛒</div>
+</div>
+
+<div class="container">
+
+<div class="grid">
+
+<div class="card">
+<div class="img" style="background-image:url('Images/product1.jpg')"></div>
+<h3>Lovely Mid-Autumn-Festival</h3>
+<p>Keychain for EP</p>
+<p class="price">30.000₫</p>
+<button>Add to cart</button>
+</div>
+
+<div class="card">
+<div class="img" style="background-image:url('Images/product2.jpg')"></div>
+<h3>Christmas Is Coming</h3>
+<p>Keychain for Album</p>
+<p class="price">30.000₫</p>
+<button>Add to cart</button>
+</div>
+
+<div class="card">
+<div class="img" style="background-image:url('Images/product3.jpg')"></div>
+<h3>Life is everything</h3>
+<p>Keychain for EP</p>
+<p class="price">30.000₫</p>
+<button>Add to cart</button>
+</div>
+
+</div>
+</div>
+
+<div class="footer">
+2026 Phương Thích Nghe Nhạc - All rights reserved | Phone: +84 843340112 | ptnn.musicgroup@gmail.com
+</div>
+
+</div>
+
+<script>
+function logout(){
+localStorage.removeItem('userSession');
+alert('Logged out successfully');
+window.location.href='index.html';
+}
+</script>
+
+</body>
+</html>

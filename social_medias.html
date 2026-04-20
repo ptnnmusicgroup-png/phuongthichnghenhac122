@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>PTNN Social Medias</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Montserrat',sans-serif;
+        }
+
+        body{
+            background: linear-gradient(135deg,#f5e6d3,#e8c9a8,#d7bfae,#c49a6c);
+            color:#3b2f2f;
+            min-height:100vh;
+        }
+
+        .wrapper{
+            display:flex;
+            height:100vh;
+            width:100vw;
+        }
+
+        .sidebar{
+            width:260px;
+            background: rgba(78,52,46,0.95);
+            padding:20px;
+            display:flex;
+            flex-direction:column;
+            color:#fff;
+        }
+
+        .sidebar h3{
+            font-size:14px;
+            margin-bottom:20px;
+            line-height:1.4;
+            font-weight:600;
+        }
+
+        .sidebar a{
+            color:#f5e6d3;
+            text-decoration:none;
+            padding:10px 12px;
+            margin:5px 0;
+            border-radius:10px;
+            transition:0.3s;
+            font-weight:500;
+        }
+
+        .sidebar a:hover{
+            background:rgba(255,255,255,0.1);
+            transform:translateX(5px);
+        }
+
+        .sidebar a.active{
+            background:#e6b98a;
+            color:#2b1b14;
+            font-weight:700;
+        }
+
+        .main{
+            flex:1;
+            display:flex;
+            flex-direction:column;
+        }
+
+        .header{
+            height:60px;
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            padding:0 20px;
+            background:#4e342e;
+            color:#ffe8c2;
+        }
+
+        .btn-group{
+            display:flex;
+            gap:10px;
+        }
+
+        .btn{
+            padding:10px 18px;
+            border-radius:999px;
+            text-decoration:none;
+            font-weight:700;
+            transition:0.3s;
+            background:linear-gradient(135deg,#f6d365,#fda085);
+            color:#3b2f2f;
+        }
+
+        .btn-signup{
+            background:linear-gradient(135deg,#8d6e63,#a1887f);
+            color:#fff;
+        }
+
+        .content{
+            flex:1;
+            overflow-y:auto;
+            padding:20px;
+        }
+
+        .title{
+            text-align:center;
+            font-size:20px;
+            font-weight:700;
+            margin:10px 0;
+        }
+
+        .sub{
+            text-align:center;
+            font-size:13px;
+            color:#5a4036;
+            margin-bottom:20px;
+        }
+
+        .container{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+            gap:20px;
+        }
+
+        .card{
+            background:#fff3e0;
+            border-radius:18px;
+            padding:18px;
+            text-align:center;
+            transition:0.3s;
+            box-shadow:0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .card:hover{
+            transform:translateY(-6px);
+        }
+
+        .icon{
+            font-size:30px;
+            margin-bottom:10px;
+            color:#4e342e;
+        }
+
+        .title-card{
+            font-weight:700;
+            margin-bottom:6px;
+        }
+
+        .link{
+            font-size:12px;
+            color:#6b4b3e;
+            word-break:break-all;
+        }
+
+        a{text-decoration:none;color:inherit;}
+
+        .btn-visit{
+            display:inline-block;
+            margin-top:10px;
+            padding:8px 14px;
+            border-radius:999px;
+            background:linear-gradient(135deg,#c49a6c,#e6b98a);
+            font-weight:700;
+            font-size:12px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+
+    <div class="sidebar">
+        <h3>🐹 Phương Thích Nghe Nhạc - Music With You Everyday!</h3>
+        <a href="index.html">Home</a>
+        <a class="active" href="social_medias.html">PTNN's Social medias</a>
+        <a href="community.html">Community</a>
+        <a href="store.html">Store</a>
+        <a href="about.html">About</a>
+    </div>
+
+    <div class="main">
+
+        <div class="header">
+            <div>Music Notebook - Love Capybara</div>
+            <div class="btn-group">
+                <a class="btn" href="login.html">Login</a>
+                <a class="btn btn-signup" href="signup.html">Sign Up</a>
+            </div>
+        </div>
+
+        <div class="content">
+
+            <div class="title">PTNN Social Medias 🌐</div>
+            <div class="sub">Connect with Phương Thích Nghe Nhạc everywhere</div>
+
+            <div class="container">
+
+                <!-- FACEBOOK -->
+                <div class="card">
+                    <div class="icon"><i class="fa-brands fa-facebook"></i></div>
+                    <div class="title-card">Facebook PTNN</div>
+                    <div class="link">facebook.com/phuongnguyencomputer.official</div>
+                    <a class="btn-visit" href="https://facebook.com/phuongnguyencomputer.official" target="_blank">Visit</a>
+                </div>
+
+                <div class="card">
+                    <div class="icon"><i class="fa-brands fa-facebook"></i></div>
+                    <div class="title-card">PTNN Artist Records</div>
+                    <div class="link">facebook.com/ptnn.artist.records</div>
+                    <a class="btn-visit" href="https://facebook.com/ptnn.artist.records" target="_blank">Visit</a>
+                </div>
+
+                <div class="card">
+                    <div class="icon"><i class="fa-brands fa-facebook"></i></div>
+                    <div class="title-card">MLAT Page</div>
+                    <div class="link">profile.php?id=61588424225139</div>
+                    <a class="btn-visit" href="https://facebook.com/profile.php?id=61588424225139" target="_blank">Visit</a>
+                </div>
+
+                <!-- YOUTUBE -->
+                <div class="card">
+                    <div class="icon"><i class="fa-brands fa-youtube"></i></div>
+                    <div class="title-card">YouTube PTNN</div>
+                    <div class="link">@ptnn.lovelytimewithmusic</div>
+                    <a class="btn-visit" href="https://www.youtube.com/@ptnn.lovelytimewithmusic" target="_blank">Visit</a>
+                </div>
+
+                <div class="card">
+                    <div class="icon"><i class="fa-brands fa-youtube"></i></div>
+                    <div class="title-card">Moonlight Channel</div>
+                    <div class="link">@moonlight_at_night_1</div>
+                    <a class="btn-visit" href="https://www.youtube.com/@moonlight_at_night_1" target="_blank">Visit</a>
+                </div>
+
+                <!-- TIKTOK -->
+                <div class="card">
+                    <div class="icon"><i class="fa-brands fa-tiktok"></i></div>
+                    <div class="title-card">TikTok PTNN</div>
+                    <div class="link">@ptnn_musicgroup</div>
+                    <a class="btn-visit" href="https://www.tiktok.com/@ptnn_musicgroup" target="_blank">Visit</a>
+                </div>
+
+                <!-- SPOTIFY -->
+                <div class="card">
+                    <div class="icon"><i class="fa-brands fa-spotify"></i></div>
+                    <div class="title-card">Spotify</div>
+                    <div class="link">25MOkDsozYW9OaaCAwqsSC</div>
+                    <a class="btn-visit" href="https://open.spotify.com/artist/25MOkDsozYW9OaaCAwqsSC" target="_blank">Visit</a>
+                </div>
+
+                <!-- APPLE MUSIC -->
+                <div class="card">
+                    <div class="icon"><i class="fa-brands fa-apple"></i></div>
+                    <div class="title-card">Apple Music</div>
+                    <div class="link">Phương Thích Nghe Nhạc</div>
+                    <a class="btn-visit" href="https://music.apple.com/vn/artist/phương-thích-nghe-nhạc/1836927170" target="_blank">Visit</a>
+                </div>
+
+                <!-- SOUNDCLOUD -->
+                <div class="card">
+                    <div class="icon"><i class="fa-brands fa-soundcloud"></i></div>
+                    <div class="title-card">SoundCloud</div>
+                    <div class="link">phuongthichnghenhac</div>
+                    <a class="btn-visit" href="https://soundcloud.com/phuongthichnghenhac" target="_blank">Visit</a>
+                </div>
+
+                <!-- AMAZON MUSIC -->
+                <div class="card">
+                    <div class="icon"><i class="fa-brands fa-amazon"></i></div>
+                    <div class="title-card">Amazon Music</div>
+                    <div class="link">PTNN Artist</div>
+                    <a class="btn-visit" href="https://music.amazon.com/artists/B0FPDBN8TK/phương-thích-nghe-nhạc" target="_blank">Visit</a>
+                </div>
+
+                <!-- DEEZER -->
+                <div class="card">
+                    <div class="icon"><i class="fa-solid fa-music"></i></div>
+                    <div class="title-card">Deezer</div>
+                    <div class="link">PTNN Artist</div>
+                    <a class="btn-visit" href="https://deezer.com/en/artist/343954461?app_id=140685" target="_blank">Visit</a>
+                </div>
+
+                <!-- TIDAL -->
+                <div class="card">
+                    <div class="icon"><i class="fa-solid fa-wave-square"></i></div>
+                    <div class="title-card">TIDAL</div>
+                    <div class="link">66294560</div>
+                    <a class="btn-visit" href="https://tidal.com/artist/66294560" target="_blank">Visit</a>
+                </div>
+
+                <!-- KUGOU -->
+                <div class="card">
+                    <div class="icon"><i class="fa-solid fa-globe"></i></div>
+                    <div class="title-card">Kugou China</div>
+                    <div class="link">Search PTNN</div>
+                    <a class="btn-visit" href="https://www.kugou.com/yy/html/search.html#searchType=song&searchKeyWord=Ph%C6%B0%C6%A1ng%20Th%C3%ADch%20Nghe%20Nh%E1%BA%A1c" target="_blank">Visit</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
