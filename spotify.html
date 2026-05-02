@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PTNN Capybara Music - Spotify Zone</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Montserrat',sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg,#f5e6d3,#e8c9a8,#d7bfae,#c49a6c);
+    color:#3b2f2f;
+    overflow-x:hidden;
+}
+
+/* ANIMATION BACKGROUND FLOAT */
+body::before{
+    content:"";
+    position:fixed;
+    width:200%;
+    height:200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.15) 10%, transparent 10.01%);
+    background-size:60px 60px;
+    animation: floatBg 20s linear infinite;
+    z-index:-1;
+}
+
+@keyframes floatBg{
+    0%{transform:translate(0,0);}
+    100%{transform:translate(-60px,-60px);}
+}
+
+.wrapper{
+    display:flex;
+    height:100vh;
+}
+
+/* SIDEBAR */
+.sidebar{
+    width:260px;
+    background: rgba(78,52,46,0.95);
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    color:#fff;
+    animation: slideIn 1s ease;
+}
+
+@keyframes slideIn{
+    from{transform:translateX(-100%); opacity:0;}
+    to{transform:translateX(0); opacity:1;}
+}
+
+.sidebar h3{
+    font-size:14px;
+    margin-bottom:20px;
+    font-weight:600;
+}
+
+.sidebar a{
+    color:#f5e6d3;
+    text-decoration:none;
+    padding:10px;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.sidebar a:hover{
+    background:rgba(255,255,255,0.15);
+    transform:translateX(6px);
+}
+
+.sidebar a.active{
+    background:#e6b98a;
+    color:#2b1b14;
+}
+
+/* MAIN */
+.main{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+}
+
+/* HEADER */
+.header{
+    height:60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 20px;
+    background:#4e342e;
+    color:#ffe8c2;
+}
+
+.btn{
+    padding:10px 16px;
+    border-radius:999px;
+    text-decoration:none;
+    font-weight:700;
+    transition:0.3s;
+    background:linear-gradient(135deg,#f6d365,#fda085);
+    color:#3b2f2f;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+.btn-signup{
+    background:linear-gradient(135deg,#8d6e63,#a1887f);
+    color:#fff;
+}
+
+/* CONTENT */
+.content{
+    flex:1;
+    overflow-y:auto;
+    padding:20px;
+}
+
+/* BANNER */
+.banner{
+    background:rgba(0,0,0,0.6);
+    color:#fff;
+    padding:25px;
+    border-radius:18px;
+    text-align:center;
+    font-size:20px;
+    font-weight:600;
+    animation: pop 1s ease;
+}
+
+@keyframes pop{
+    from{transform:scale(0.8); opacity:0;}
+    to{transform:scale(1); opacity:1;}
+}
+
+/* CARD */
+.card{
+    background:#fff3e0;
+    padding:20px;
+    border-radius:15px;
+    margin-top:15px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.img-box{
+    width:120px;
+    height:120px;
+    margin:0 auto 10px;
+    border-radius:15px;
+    background-size:cover;
+    background-position:center;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-8px);}
+}
+
+/* SPOTIFY EMBED */
+.spotify-box{
+    margin-top:15px;
+    display:flex;
+    justify-content:center;
+    animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+/* FOOTER */
+.footer{
+    text-align:center;
+    padding:18px;
+    font-size:12px;
+    opacity:0.8;
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+    <h3>🐹 PTNN - Capybara Music Zone</h3>
+    <a class="active" href="#">Home</a>
+    <a href="#">Spotify</a>
+    <a href="#">Playlist</a>
+    <a href="#">Community</a>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+    <div class="header">
+        <div>🎧 PTNN Music Notebook</div>
+        <div>
+            <a class="btn" href="#">Login</a>
+            <a class="btn btn-signup" href="#">Sign Up</a>
+        </div>
+    </div>
+
+    <div class="content">
+
+        <div class="banner">
+            Phương Thích Nghe Nhạc<br>
+            Spotify Capybara Chill Zone 🎵🐹
+        </div>
+
+        <!-- SPOTIFY EMBED -->
+        <h2 style="margin-top:20px;">🎶 Featured Spotify Track</h2>
+
+        <div class="spotify-box">
+            <iframe style="border-radius:16px"
+                src="https://open.spotify.com/embed/track/4cOdK2wGLETKBW3PvgPWqT"
+                width="320"
+                height="380"
+                frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+            </iframe>
+        </div>
+
+        <!-- PLAYLIST -->
+        <h2 style="margin-top:30px;">🎧 Chill Playlist</h2>
+
+        <div class="card">
+            <div class="img-box" style="background-image:url('https://picsum.photos/200')"></div>
+            <div>Lo-fi / Study / Relax</div>
+        </div>
+
+        <div class="card">
+            <div class="img-box" style="background-image:url('https://picsum.photos/201')"></div>
+            <div>Sleep & Chill Music</div>
+        </div>
+
+        <div class="footer">
+            2026 PTNN Music - Capybara Edition 🐹
+        </div>
+
+    </div>
+</div>
+
+</div>
+
+</body>
+</html>
